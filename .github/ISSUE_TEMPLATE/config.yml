@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/MajidAsghariTabrizi/free-best-router#readme
+    about: README, architecture, provider guide
+  - name: Security issues
+    url: https://github.com/MajidAsghariTabrizi/free-best-router/security
+    about: For security issues, please follow the process in SECURITY.md

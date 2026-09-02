@@ -1,0 +1,83 @@
+{
+  "server": {
+    "host": "127.0.0.1",
+    "port": 4098,
+    "basePath": "/v1"
+  },
+  "providers": {
+    "openrouter": {
+      "enabled": true,
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKeyEnv": "OPENROUTER_API_KEY"
+    },
+    "opencode": {
+      "enabled": true,
+      "baseUrl": "http://127.0.0.1:4097/opencode.ai/v1",
+      "apiKeyEnv": "OPENCODE_ZEN_API_KEY"
+    },
+    "deepseek": {
+      "enabled": true,
+      "baseUrl": "https://api.deepseek.com/v1",
+      "apiKeyEnv": "DEEPSEEK_API_KEY"
+    },
+    "groq": {
+      "enabled": true,
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "apiKeyEnv": "GROQ_API_KEY"
+    },
+    "cerebras": {
+      "enabled": true,
+      "baseUrl": "https://api.cerebras.ai/v1",
+      "apiKeyEnv": "CEREBRAS_API_KEY"
+    },
+    "mistral": {
+      "enabled": true,
+      "baseUrl": "https://api.mistral.ai/v1",
+      "apiKeyEnv": "MISTRAL_API_KEY"
+    },
+    "local": {
+      "enabled": true
+    }
+  },
+  "routing": {
+    "defaultRoute": "free-best",
+    "policy": {
+      "freeOnly": true,
+      "paidFallback": false
+    },
+    "strategy": {
+      "capabilityAware": true,
+      "adaptive": true,
+      "explorationRate": 0.05,
+      "minSamples": 5,
+      "exploreGap": 0.15,
+      "explorePoolMax": 4
+    },
+    "discovery": {
+      "enabled": true,
+      "ttlHours": 6
+    },
+    "fallback": {
+      "enabled": true,
+      "maxDepth": 4,
+      "attemptTimeoutMs": 45000
+    },
+    "health": {
+      "cooldownEnabled": true,
+      "maxCooldownSec": 480,
+      "warmUpTopN": 40,
+      "cooldownByType": {
+        "rate_limit": 60000,
+        "timeout": 90000,
+        "transport": 90000,
+        "server_error": 90000,
+        "finish_error": 120000,
+        "model_not_found": 86400000,
+        "client_error": 86400000
+      }
+    },
+    "privacy": {
+      "showProviderPolicy": true
+    }
+  }
+}

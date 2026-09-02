@@ -1,0 +1,18 @@
+# DeepSeek Harness — settings.yaml fragment
+#
+# Add this block under `llm-pi-ai.providers` in your DSH settings to make
+# Free Best Router available as a model named "free-best".
+#
+# In your DSH environment, set FREE_ROUTER_API_KEY to any non-empty value — the
+# router does not validate the inbound Authorization header. It uses its own
+# provider keys (from .env or the orchestrator).
+
+llm-pi-ai:
+  providers:
+    free-router:
+      displayName: Free Best Router
+      api: openai-completions
+      baseURL: http://127.0.0.1:4098/v1
+      apiKeyEnv: FREE_ROUTER_API_KEY
+      models:
+        - id: free-best

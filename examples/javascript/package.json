@@ -1,0 +1,9 @@
+{
+  "name": "free-best-router-js-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.50.0"
+  }
+}

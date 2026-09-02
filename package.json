@@ -1,0 +1,67 @@
+{
+  "name": "free-best-router",
+  "version": "0.1.0",
+  "description": "Open-source intelligent router for free AI models. One OpenAI-compatible endpoint that automatically finds and routes to the best available free model across OpenRouter, OpenCode/Zen, Groq, Cerebras, Mistral, DeepSeek, and local inference servers.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "main": "src/index.mjs",
+  "bin": {
+    "free-best-router": "src/index.mjs"
+  },
+  "files": [
+    "src/",
+    "providers/",
+    "config.json",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "start": "node src/index.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "test:engine": "node --test test/engine.test.mjs",
+    "test:multi-provider": "node --test test/multi-provider.test.mjs",
+    "test:server": "node --test test/server-failfast.test.mjs",
+    "test:exhaustion": "node --test test/exhaustion-recovery.test.mjs",
+    "test:adaptive": "node --test test/adaptive-exploration.test.mjs",
+    "test:rotation": "node --test test/rotation-rotation.test.mjs",
+    "diagnostics": "node -e \"fetch('http://127.0.0.1:4098/diagnostics').then(r=>r.json()).then(j=>console.log(JSON.stringify(j,null,2)))\""
+  },
+  "keywords": [
+    "ai",
+    "llm",
+    "llm-router",
+    "ai-router",
+    "free-ai",
+    "free-llm",
+    "openai-compatible",
+    "llm-gateway",
+    "model-routing",
+    "deepseek",
+    "deepseek-harness",
+    "openrouter",
+    "opencode",
+    "groq",
+    "cerebras",
+    "mistral",
+    "ollama",
+    "ai-agents",
+    "developer-tools"
+  ],
+  "dependencies": {
+    "undici": "^8.10.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MajidAsghariTabrizi/free-best-router.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MajidAsghariTabrizi/free-best-router/issues"
+  },
+  "homepage": "https://github.com/MajidAsghariTabrizi/free-best-router#readme"
+}

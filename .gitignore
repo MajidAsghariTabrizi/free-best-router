@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.env.local
+*.env.production
+*.env.development
+.envrc
+
+# Credentials
+.credentials.yaml
+credentials.yaml
+*.pem
+*.key
+*.crt
+
+# Logs
+*.log
+logs/
+free-router.log
+free-router.err
+
+# Runtime / state
+.runtime/
+.cache/
+dist/
+build/
+coverage/
+.nyc_output/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS / temp
+tmp/
+.tmp/
+*.tmp
+
+# Test artifacts
+test/_*.log
+test/_*.out
+.coverage
+test-results/
+playwright-report/
+
+# Git
+*.orig
+*.rej
+.git/
+.github/CODEOWNERS
+
+# Local provider allowlist overrides
+providers.local.mjs
