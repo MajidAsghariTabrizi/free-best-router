@@ -318,6 +318,15 @@ We welcome provider adapters, ranking experiments, tests, and documentation. Sta
 
 Free Best Router is designed to be safe to expose on a trusted local network. It does not validate the inbound `Authorization` header (it uses its own provider keys). If you bind it to a public address, add an authentication proxy in front. See [`SECURITY.md`](SECURITY.md).
 
+## Related Projects
+
+| Project | What it solves |
+|---|---|
+| [`universal-engineering-agent`](https://github.com/MajidAsghariTabrizi/universal-engineering-agent) | **Engineering-agent operating kernel.** The 9-stage loop any coding agent should perform: inspect → plan → implement → verify → classify → recover → test → generalize. UEA is the *stack* this router sits below. |
+| DeepSeek Harness | The agent framework. This router is a drop-in OpenAI-compatible provider block for DSH. |
+
+**UEA = engineering coordination.** **Free Best Router = model routing.** They are siblings.
+
 ## License
 
 MIT — see [`LICENSE`](LICENSE).
