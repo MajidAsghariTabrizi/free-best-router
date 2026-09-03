@@ -1,4 +1,4 @@
-# Free Best Router
+﻿# Free Best Router
 
 > One OpenAI-compatible endpoint that automatically finds and routes requests to the best available free AI model.
 
@@ -9,13 +9,13 @@
 
 ```text
 Your App
-   ↓
+   â†“
 Free Best Router
-   ↓
-┌───────────────┬───────────────┬───────────────┐
-│ OpenRouter    │ OpenCode/Zen  │ Other Free    │
-│ Free Models   │ Free Models   │ Providers     │
-└───────────────┴───────────────┴───────────────┘
+   â†“
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ OpenRouter    â”‚ OpenCode/Zen  â”‚ Other Free    â”‚
+â”‚ Free Models   â”‚ Free Models   â”‚ Providers     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ## What is it?
@@ -32,39 +32,39 @@ Free Best Router
 8. **Cooldown-cools** unhealthy routes so the same failure doesn't repeat
 9. **Explores** under-sampled candidates periodically so the winner doesn't ossify
 
-Your application sees a single OpenAI-compatible endpoint that always returns the best answer it can from free models — no per-provider configuration, no manual failover logic, no surprise rate limits.
+Your application sees a single OpenAI-compatible endpoint that always returns the best answer it can from free models â€” no per-provider configuration, no manual failover logic, no surprise rate limits.
 
 ## Why?
 
 Free AI models are amazing and they are a mess. They are:
 
-- **Unreliable** — free-tier inference queues stall for 30–120 seconds
-- **Rate limited** — aggressive per-minute limits that change without notice
-- **Frequently unavailable** — models cycle in and out of 429/404/transport-error states hour by hour
-- **Spread across many providers** — OpenRouter, OpenCode/Zen, Groq, Cerebras, Mistral, DeepSeek, local Ollama, and more
-- **Constantly changing** — new free models appear weekly; old ones disappear
-- **Difficult to compare** — every provider exposes different capability metadata
-- **Difficult to integrate** — each provider has a slightly different API contract
-- **Difficult to configure manually** — keeping a working free model list is a full-time job
+- **Unreliable** â€” free-tier inference queues stall for 30â€“120 seconds
+- **Rate limited** â€” aggressive per-minute limits that change without notice
+- **Frequently unavailable** â€” models cycle in and out of 429/404/transport-error states hour by hour
+- **Spread across many providers** â€” OpenRouter, OpenCode/Zen, Groq, Cerebras, Mistral, DeepSeek, local Ollama, and more
+- **Constantly changing** â€” new free models appear weekly; old ones disappear
+- **Difficult to compare** â€” every provider exposes different capability metadata
+- **Difficult to integrate** â€” each provider has a slightly different API contract
+- **Difficult to configure manually** â€” keeping a working free model list is a full-time job
 
 **Free Best Router** turns this mess into one stable endpoint.
 
 ## Features
 
-- ✅ **OpenAI-compatible** — drop-in for any `openai-python` / `openai-node` client
-- ✅ **Multi-provider** — OpenRouter, OpenCode/Zen, Groq, Cerebras, Mistral, DeepSeek, local Ollama/LM Studio
-- ✅ **Auto-discovery** — every provider's model catalog is fetched at startup
-- ✅ **Free-only by default** — paid models are excluded unless you opt in
-- ✅ **Capability-aware ranking** — coding, reasoning, tool-calling, vision, long-context
-- ✅ **Runtime learning** — Wilson lower bound on success rate, time-decay penalties
-- ✅ **Smart exploration** — periodically probes under-sampled healthy candidates
-- ✅ **Automatic fallback** — up to 4 model attempts per request, bounded wall time
-- ✅ **Per-failure-type cooldowns** — exponential backoff with per-type caps (1h for 404, 8m for 429)
-- ✅ **Bounded failure** — returns 502/429 + `Retry-After` + `next_eligible_model` when pool is empty
-- ✅ **Streaming** — full SSE passthrough, finish_reason + tool_calls captured
-- ✅ **DeepSeek Harness integration** — drop-in OpenAI-compatible provider config
-- ✅ **Self-hosted & privacy-first** — your provider keys never leave your machine
-- ✅ **Zero telemetry** — the router does not phone home
+- âœ… **OpenAI-compatible** â€” drop-in for any `openai-python` / `openai-node` client
+- âœ… **Multi-provider** â€” OpenRouter, OpenCode/Zen, Groq, Cerebras, Mistral, DeepSeek, local Ollama/LM Studio
+- âœ… **Auto-discovery** â€” every provider's model catalog is fetched at startup
+- âœ… **Free-only by default** â€” paid models are excluded unless you opt in
+- âœ… **Capability-aware ranking** â€” coding, reasoning, tool-calling, vision, long-context
+- âœ… **Runtime learning** â€” Wilson lower bound on success rate, time-decay penalties
+- âœ… **Smart exploration** â€” periodically probes under-sampled healthy candidates
+- âœ… **Automatic fallback** â€” up to 4 model attempts per request, bounded wall time
+- âœ… **Per-failure-type cooldowns** â€” exponential backoff with per-type caps (1h for 404, 8m for 429)
+- âœ… **Bounded failure** â€” returns 502/429 + `Retry-After` + `next_eligible_model` when pool is empty
+- âœ… **Streaming** â€” full SSE passthrough, finish_reason + tool_calls captured
+- âœ… **DeepSeek Harness integration** â€” drop-in OpenAI-compatible provider config
+- âœ… **Self-hosted & privacy-first** â€” your provider keys never leave your machine
+- âœ… **Zero telemetry** â€” the router does not phone home
 
 ## Quick start (60 seconds)
 
@@ -74,7 +74,7 @@ git clone https://github.com/MajidAsghariTabrizi/free-best-router.git
 cd free-best-router
 npm install
 
-# 2. (Optional) Add provider keys — the router works without any keys, but having
+# 2. (Optional) Add provider keys â€” the router works without any keys, but having
 #    at least one OpenRouter key dramatically improves the free model pool.
 cp .env.example .env
 # edit .env and set at least OPENROUTER_API_KEY=<your-key-here>
@@ -88,11 +88,11 @@ That's it. You now have a running OpenAI-compatible router on `http://127.0.0.1:
 ```bash
 # Health check
 curl http://127.0.0.1:4098/health
-# → {"status":"ok","route":"free-best"}
+# â†’ {"status":"ok","route":"free-best"}
 
 # List models (always returns the single route)
 curl http://127.0.0.1:4098/v1/models
-# → {"object":"list","data":[{"id":"free-best","object":"model","owned_by":"free-router"}]}
+# â†’ {"object":"list","data":[{"id":"free-best","object":"model","owned_by":"free-router"}]}
 
 # Live chat completion
 curl -X POST http://127.0.0.1:4098/v1/chat/completions \
@@ -104,7 +104,7 @@ curl -X POST http://127.0.0.1:4098/v1/chat/completions \
   }'
 ```
 
-> The router picks a different model every time you ask — that's the point. See `x-free-router-model` in the response headers to see which one it picked.
+> The router picks a different model every time you ask â€” that's the point. See `x-free-router-model` in the response headers to see which one it picked.
 
 ## DeepSeek Harness
 
@@ -122,7 +122,7 @@ llm-pi-ai:
         - id: free-best
 ```
 
-DSH will treat the router exactly like any other OpenAI-compatible provider. Set `FREE_ROUTER_API_KEY=any-value` in DSH's environment (the router doesn't validate the inbound bearer — it uses its own provider keys from `.env`). The actual model picked by the router is recorded in `x-free-router-model` response headers and is preserved in the upstream response's `model` field, so DSH's `responseModel` is the real model id.
+DSH will treat the router exactly like any other OpenAI-compatible provider. Set `FREE_ROUTER_API_KEY=any-value` in DSH's environment (the router doesn't validate the inbound bearer â€” it uses its own provider keys from `.env`). The actual model picked by the router is recorded in `x-free-router-model` response headers and is preserved in the upstream response's `model` field, so DSH's `responseModel` is the real model id.
 
 See [`examples/deepseek-harness/settings.yaml`](examples/deepseek-harness/settings.yaml) for a complete example.
 
@@ -215,11 +215,11 @@ Adding a new OpenAI-compatible provider is a 30-line file in `providers/`. See [
 ## Routing algorithm
 
 ```
-DISCOVER → NORMALIZE → FREE FILTER → CAPABILITY FILTER → HEALTH FILTER
-        → QUALITY RANK → TASK RANK → SELECT → ATTEMPT → RECORD OUTCOME
-                                                  ↓ on failure
+DISCOVER â†’ NORMALIZE â†’ FREE FILTER â†’ CAPABILITY FILTER â†’ HEALTH FILTER
+        â†’ QUALITY RANK â†’ TASK RANK â†’ SELECT â†’ ATTEMPT â†’ RECORD OUTCOME
+                                                  â†“ on failure
                                               FALLBACK (next candidate)
-                                                  ↓ all candidates bad
+                                                  â†“ all candidates bad
                                           502 + Retry-After
 ```
 
@@ -230,7 +230,7 @@ total = capability_fit*0.25 + agentic_quality*0.20 + reliability*0.20
       + coding_quality*0.15 + context_fit*0.08 + tool_quality*0.07 + latency*0.05
 ```
 
-Hard requirements (must all pass): `free`, provider reachable, `code_generation`, `tool_calling`; `vision` when images are present; `long_context` for repo-wide tasks. Exploration is 5% (configurable) — 5% of requests go to a non-incumbent top-half candidate that still satisfies all hard requirements.
+Hard requirements (must all pass): `free`, provider reachable, `code_generation`, `tool_calling`; `vision` when images are present; `long_context` for repo-wide tasks. Exploration is 5% (configurable) â€” 5% of requests go to a non-incumbent top-half candidate that still satisfies all hard requirements.
 
 See [`docs/architecture.md`](docs/architecture.md) for the full design.
 
@@ -263,11 +263,11 @@ Returns the current winner, top 10 ranked candidates, every provider's health st
 - Free models without authentication don't exist (every free tier still requires a free account). At least one provider key is required.
 
 **Every request returns 429 / `NO_FREE_AGENT_MODEL_AVAILABLE`.**
-- All free candidates are rate-limited or on cooldown. The router returns a `Retry-After` header — wait that long.
+- All free candidates are rate-limited or on cooldown. The router returns a `Retry-After` header â€” wait that long.
 - Add more provider keys to widen the pool.
 - Lower `routing.strategy.explorationRate` if you want the incumbent to dominate more.
 
-**First request is very slow (5–30s).**
+**First request is very slow (5â€“30s).**
 - This is normal for the first call to a free model. The free tier queues inference and cold-loads weights. The router itself is fast.
 - Increase your client timeout to 120s+. The router is designed for free-tier latency.
 
@@ -279,18 +279,18 @@ Returns the current winner, top 10 ranked candidates, every provider's health st
 
 ## Documentation
 
-- [`docs/architecture.md`](docs/architecture.md) — full system design, scoring math, state machines
-- [`docs/providers.md`](docs/providers.md) — how to add a new provider adapter
-- [`SECURITY.md`](SECURITY.md) — vulnerability reporting, security model
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — contribution workflow, dev setup, code style
-- [`CHANGELOG.md`](CHANGELOG.md) — release history
+- [`docs/architecture.md`](docs/architecture.md) â€” full system design, scoring math, state machines
+- [`docs/providers.md`](docs/providers.md) â€” how to add a new provider adapter
+- [`SECURITY.md`](SECURITY.md) â€” vulnerability reporting, security model
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) â€” contribution workflow, dev setup, code style
+- [`CHANGELOG.md`](CHANGELOG.md) â€” release history
 
 ## Examples
 
-- [`examples/curl/`](examples/curl/) — raw `curl` requests
-- [`examples/openai-python/`](examples/openai-python/) — Python `openai` SDK
-- [`examples/javascript/`](examples/javascript/) — Node.js `openai` SDK
-- [`examples/deepseek-harness/`](examples/deepseek-harness/) — DSH `settings.yaml` + `.env`
+- [`examples/curl/`](examples/curl/) â€” raw `curl` requests
+- [`examples/openai-python/`](examples/openai-python/) â€” Python `openai` SDK
+- [`examples/javascript/`](examples/javascript/) â€” Node.js `openai` SDK
+- [`examples/deepseek-harness/`](examples/deepseek-harness/) â€” DSH `settings.yaml` + `.env`
 
 ## Roadmap
 
@@ -301,7 +301,7 @@ Returns the current winner, top 10 ranked candidates, every provider's health st
 - Persistent on-disk state (survive restarts without losing cooldowns)
 - Per-provider HTTP proxy support (currently env-only)
 - `gpt-oss`, `o3`, `o4` family detector
-- Adaptive capability inference (bootstrap → observed)
+- Adaptive capability inference (bootstrap â†’ observed)
 - Optional Prometheus `/metrics` endpoint
 
 **Ideas (not committed)**
@@ -320,10 +320,11 @@ Free Best Router is designed to be safe to expose on a trusted local network. It
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT â€” see [`LICENSE`](LICENSE).
 
 ## Acknowledgements
 
 Inspired by every developer who has ever lost an afternoon to a free-model rate limit.
 
-— Built by [Majid Asghari Tabrizi](https://github.com/MajidAsghariTabrizi)
+â€” Built by [Majid Asghari Tabrizi](https://github.com/MajidAsghariTabrizi)
+
