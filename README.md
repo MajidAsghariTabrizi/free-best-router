@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node >= 22](https://img.shields.io/badge/node-%E2%89%A522-339933)](https://nodejs.org)
-[![Tests](https://img.shields.io/badge/tests-52%20passing-brightgreen)](test/)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](test/)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ```text
