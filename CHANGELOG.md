@@ -5,6 +5,16 @@ All notable changes to Free Best Router will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] — 2026-11-09 — Documentation trust release
+
+### Changed
+
+- Fixed the DeepSeek Harness integration link (previously pointed at bare github.com). (#1)
+- Quick start now includes an optional `npm test` verification step. (#1)
+- Live CI badge (Node 22/24) replaces the static tests badge. (#2)
+- Startup-readiness note: first boot performs provider discovery + warm-up probes — poll `GET /health`. (#2)
+- Quick start marked Windows-verified (first boot tested on Windows 11 / Node 22). (#2)
+
 ## [0.1.0] — 2026-XX-XX — Initial public release
 
 The first stable, public, open-source release of Free Best Router.
