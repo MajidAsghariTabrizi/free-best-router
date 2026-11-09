@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node >= 22](https://img.shields.io/badge/node-%E2%89%A522-339933)](https://nodejs.org)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](test/)
+[![CI](https://github.com/MajidAsghariTabrizi/free-best-router/actions/workflows/ci.yml/badge.svg)](https://github.com/MajidAsghariTabrizi/free-best-router/actions/workflows/ci.yml)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ```text
@@ -68,6 +68,8 @@ Free AI models are amazing and they are a mess. They are:
 
 ## Quick start (60 seconds)
 
+Works on Linux, macOS, and Windows (Node >= 22; CI runs Node 22/24 on Ubuntu, first boot verified on Windows).
+
 ```bash
 # 1. Install
 git clone https://github.com/MajidAsghariTabrizi/free-best-router.git
@@ -84,6 +86,8 @@ npm start
 ```
 
 That's it. You now have a running OpenAI-compatible router on `http://127.0.0.1:4098/v1`.
+
+> **First boot takes a moment.** The router discovers and warm-up-probes every provider catalog before it is ready to serve. Poll `GET /health` until it returns `{"status":"ok"}` (typically a few seconds; longer with many providers configured).
 
 ```bash
 # Health check
