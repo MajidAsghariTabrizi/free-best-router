@@ -81,6 +81,9 @@ cp .env.example .env
 
 # 3. Start
 npm start
+
+# 4. (Optional) Verify your installation — runs the full offline test suite
+npm test
 ```
 
 That's it. You now have a running OpenAI-compatible router on `http://127.0.0.1:4098/v1`.
@@ -108,7 +111,7 @@ curl -X POST http://127.0.0.1:4098/v1/chat/completions \
 
 ## DeepSeek Harness
 
-Free Best Router integrates with [DeepSeek Harness](https://github.com) as a first-class OpenAI-compatible provider. Add this to your DSH `settings.yaml`:
+Free Best Router integrates with [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) as a first-class OpenAI-compatible provider. Add this to your DSH `settings.yaml`:
 
 ```yaml
 llm-pi-ai:
