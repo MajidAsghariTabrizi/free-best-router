@@ -113,6 +113,23 @@ curl -X POST http://127.0.0.1:4098/v1/chat/completions \
 
 > The router picks a different model every time you ask — that's the point. See `x-free-router-model` in the response headers to see which one it picked.
 
+**Real first-boot output (captured on Windows 11 / Node 22, no API keys configured):**
+
+```text
+$ npm start
+… provider discovery + warm-up probes …
+
+$ curl http://127.0.0.1:4098/health
+{"status":"ok","route":"free-best"}
+
+$ curl http://127.0.0.1:4098/v1/models
+{"object":"list","data":[{"id":"free-best","object":"model","owned_by":"free-router"}]}
+```
+
+---
+
+**If free-best-router saves you the provider-glue code it saves us, a ⭐ on the repo helps other developers find it.** Bugs, ideas, and PRs are welcome — see [Contributing](CONTRIBUTING.md).
+
 ## DeepSeek Harness
 
 Free Best Router integrates with [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) as a first-class OpenAI-compatible provider. Add this to your DSH `settings.yaml`:
